@@ -1,0 +1,28 @@
+{
+  "invoice": {
+    "number": "33-0092kk00",
+      "date": "2018-07-31T00:00:00Z",
+      "dueDate": "2018-07-31T00:00:00Z",
+      "terms": "Net 0",
+      "balance": 452450
+  },
+  "overview": {
+    "status": "active",
+    "method": "multimodal",
+    "capacity": "lcl",
+    "drayage": [
+      "pickup",
+      "delivery"
+    ],
+    "incoterms": "fob",
+    "serviceOptions": [
+      "deconsolidation",
+      "customs clearence"
+    ],
+    "hazardous": [
+      "lithium batteries",
+      "hazmat",
+      "other"
+    ]
+  }
+}

@@ -4,6 +4,7 @@ import {
   faSearch,
   faQuestionCircle,
   faBell,
+  faIndustry,
 } from '@fortawesome/free-solid-svg-icons'
 
 /**
@@ -13,3 +14,4 @@ import {
 library.add(faSearch)
 library.add(faQuestionCircle)
 library.add(faBell)
+library.add(faIndustry)

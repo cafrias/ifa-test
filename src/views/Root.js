@@ -4,11 +4,15 @@
 import React from 'react'
 
 import UINavbar from '../components/UI/Navbar/Navbar'
+import Billing from './billing/Billing'
 
 const Root = () => {
   return (
     <div>
       <UINavbar />
+      <main>
+        <Billing />
+      </main>
     </div>
   )
 }
