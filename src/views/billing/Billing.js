@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/lib/Row'
 
 import BillingInvoice from '../../components/Billing/Invoice'
 import BillingDetails from '../../components/Billing/Details/Details'
+import BillingOverview from '../../components/Billing/Overview'
 
 import UISpinner from '../../components/UI/Spinner'
 
@@ -49,6 +50,11 @@ class Billing extends React.Component {
         <Row>
           <Col>
             <BillingDetails />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <BillingOverview overview={this.state.info.overview} />
           </Col>
         </Row>
       </Container>

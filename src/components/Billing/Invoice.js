@@ -1,5 +1,7 @@
 import React from 'react'
 
+import f from '../../utils/filters'
+
 import Card from 'react-bootstrap/lib/Card'
 import Col from 'react-bootstrap/lib/Col'
 import Row from 'react-bootstrap/lib/Row'
@@ -25,7 +27,7 @@ const BillingInvoice = ({ invoice }) => {
                 <dt>Due Date</dt>
                 <dd>{invoice.dueDate}</dd>
                 <dt>Terms</dt>
-                <dd>Net 0</dd>
+                <dd>{invoice.terms}</dd>
               </dl>
             </Col>
             <Col>
@@ -33,7 +35,7 @@ const BillingInvoice = ({ invoice }) => {
             </Col>
             <Col>
               <h3>New Balance upon Re-booking</h3>
-              <span>${invoice.balance}</span>
+              <span>${f.money(invoice.balance)}</span>
             </Col>
           </Row>
         </Card.Body>
