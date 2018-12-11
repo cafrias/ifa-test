@@ -1,4 +1,5 @@
 import React from 'react'
+import './Invoice.scss'
 
 import f from '../../utils/filters'
 
@@ -9,33 +10,33 @@ import Row from 'react-bootstrap/lib/Row'
 const BillingInvoice = ({ invoice }) => {
   return (
     <section>
-      <h1 className="mr-2 mb-2 ml-1">
+      <h2 className="mb-3 ml-1">
         Invoice <small className="text-muted">{invoice.number}</small>
-      </h1>
+      </h2>
       <Card>
         <Card.Header>
-          <h2 className="text-uppercase">Invoice - Revision</h2>
+          <h4 className="text-uppercase">Invoice - Revision</h4>
         </Card.Header>
         <Card.Body>
           <Row>
-            <Col>
-              <dl>
+            <Col className="card__cell" xs={12} md={4}>
+              <dl className="inline-dl">
                 <dt>Invoice #</dt>
                 <dd>{invoice.number}</dd>
                 <dt>Date</dt>
-                <dd>{invoice.date}</dd>
+                <dd>{f.date(invoice.date)}</dd>
                 <dt>Due Date</dt>
-                <dd>{invoice.dueDate}</dd>
+                <dd>{f.date(invoice.dueDate)}</dd>
                 <dt>Terms</dt>
                 <dd>{invoice.terms}</dd>
               </dl>
             </Col>
-            <Col>
-              <h3>Bill To</h3>
+            <Col className="card__cell" xs={12} md={4}>
+              <h5>Bill To</h5>
             </Col>
-            <Col>
-              <h3>New Balance upon Re-booking</h3>
-              <span>${f.money(invoice.balance)}</span>
+            <Col className="card__cell" xs={12} md={4}>
+              <h5 className="mb-4">New Balance upon Re-booking</h5>
+              <p class="invoice__balance">${f.money(invoice.balance)}</p>
             </Col>
           </Row>
         </Card.Body>

@@ -1,2 +1,20 @@
+// 
+// Bootstrap default
+// 
+
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+
+//
+// Overrides
+// 
+
+$navbar-light-hover-color: #0eb2db;
+$body-bg: #f8fbff;
+
+
+// 
+// Custom
+// 
+
+$color-standout: #ff9711;

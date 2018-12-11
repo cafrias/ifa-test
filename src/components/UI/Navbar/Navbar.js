@@ -14,7 +14,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const UINavbar = () => {
   return (
-    <Navbar variant="light" bg="light" expand="lg">
+    <Navbar
+      className="border-bottom"
+      fixed="top"
+      variant="light"
+      bg="white"
+      expand="lg"
+    >
       <Navbar.Brand href="#">
         <img
           src={logo}
