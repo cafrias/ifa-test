@@ -1,0 +1,9 @@
+@import 'src/styles/variables';
+
+.billing__section {
+  margin-bottom: map-get($spacers, 5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './Billing.scss'
 
 import data from './data.json'
 
@@ -41,18 +42,18 @@ class Billing extends React.Component {
       )
     }
     return (
-      <Container>
-        <Row>
+      <Container className="billing">
+        <Row className="billing__section">
           <Col>
             <BillingInvoice invoice={this.state.info.invoice} />
           </Col>
         </Row>
-        <Row>
+        <Row className="billing__section">
           <Col>
             <BillingDetails />
           </Col>
         </Row>
-        <Row>
+        <Row className="billing__section">
           <Col>
             <BillingOverview overview={this.state.info.overview} />
           </Col>

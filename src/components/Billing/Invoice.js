@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/lib/Row'
 const BillingInvoice = ({ invoice }) => {
   return (
     <section>
-      <h1 className="mr-2 mb-0">
+      <h1 className="mr-2 mb-2 ml-1">
         Invoice <small className="text-muted">{invoice.number}</small>
       </h1>
       <Card>

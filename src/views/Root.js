@@ -10,7 +10,7 @@ const Root = () => {
   return (
     <div>
       <UINavbar />
-      <main>
+      <main className="pt-4">
         <Billing />
       </main>
     </div>

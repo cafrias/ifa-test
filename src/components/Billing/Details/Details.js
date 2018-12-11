@@ -13,8 +13,11 @@ const BillingDetails = () => {
   return (
     <section>
       <Tab.Container id="left-tabs-example" defaultActiveKey="diagram">
-        <Row className="justify-items-end">
-          <Col>
+        <Row className="justify-content-between mb-3">
+          <Col xs={3} md={6} className="align-self-center">
+            <h5 className="text-md-right">Text</h5>
+          </Col>
+          <Col xs="auto">
             <Nav variant="pills">
               <Nav.Item>
                 <Nav.Link eventKey="diagram">Diagram</Nav.Link>

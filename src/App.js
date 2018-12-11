@@ -3,7 +3,6 @@
  * that should be global.
  */
 import React, { Component } from 'react'
-import './App.scss'
 import './iconsLibrary'
 
 import Root from './views/Root'
