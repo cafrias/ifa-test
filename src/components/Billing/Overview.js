@@ -16,7 +16,7 @@ const BillingOverview = ({ overview }) => {
       </Card.Header>
       <Card.Body>
         <Row>
-          <Col className="card__cell">
+          <Col xs={12} md={6} className="card__cell">
             <dl className="inline-dl">
               <dt>Status</dt>
               <dd>{renderStatus(overview.status)}</dd>
@@ -28,7 +28,7 @@ const BillingOverview = ({ overview }) => {
               <dd>{f.list(overview.drayage)}</dd>
             </dl>
           </Col>
-          <Col className="card__cell">
+          <Col xs={12} md={6} className="card__cell">
             <dl className="inline-dl">
               <dt>Incoterms</dt>
               <dd>{f.capitalize(overview.incoterms)}</dd>
