@@ -3,6 +3,7 @@
 
 .page-content {
   padding-top: 80px;
+  padding-bottom: map-get($spacers, 3);
 
   @include media-breakpoint-up('md') {
     padding-top: 100px;
@@ -11,7 +12,25 @@
 
 // 
 // Card
-// 
+//
+
+// NODE: Default bootstrap card isn't overriden , because it may no apply, if following card styles are used globally,
+// override defaults with them.
+
+.card {
+  box-shadow: $box-shadow-sm;
+}
+
+.card__header {
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
+}
+
+.card__title {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}
 
 .card__cell {
   border-bottom: 1px solid $gray-300;

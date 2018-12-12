@@ -33,8 +33,8 @@ class Billing extends React.Component {
     if (!this.state.info) {
       return (
         <Container>
-          <Row>
-            <Col>
+          <Row className="justify-content-center">
+            <Col xs="auto">
               <UISpinner />
             </Col>
           </Row>

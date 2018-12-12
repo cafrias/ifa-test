@@ -17,7 +17,7 @@
     "incoterms": "fob",
     "serviceOptions": [
       "deconsolidation",
-      "customs clearence"
+      "customs clearance"
     ],
     "hazardous": [
       "lithium batteries",

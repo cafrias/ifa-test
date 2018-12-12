@@ -7,7 +7,7 @@ export default {
     return value
       .map(v => {
         if (typeof v === 'string') {
-          return v.charAt(0).toUpperCase() + v.slice(1)
+          return this.capitalize(v)
         }
 
         return v
@@ -27,5 +27,27 @@ export default {
   date(value) {
     const date = new Date(value)
     return `${date.getMonth() + 1}/${date.getDate() + 1}/${date.getFullYear()}`
+  },
+  capitalize(value) {
+    if (typeof value !== 'string') {
+      return '???'
+    }
+
+    return value
+      .trim()
+      .split(/\s+/)
+      .map(word => {
+        const lower = word.toLowerCase()
+
+        return lower.charAt(0).toUpperCase() + lower.substr(1)
+      })
+      .join(' ')
+  },
+  upper(value) {
+    if (typeof value !== 'string') {
+      return '???'
+    }
+
+    return value.toUpperCase()
   },
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 import f from '../../utils/filters'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Card from 'react-bootstrap/lib/Card'
 import Col from 'react-bootstrap/lib/Col'
 import Row from 'react-bootstrap/lib/Row'
@@ -10,26 +12,26 @@ const BillingOverview = ({ overview }) => {
   return (
     <Card>
       <Card.Header>
-        <h2 className="text-uppercase">Overview</h2>
+        <h2 className="text-uppercase card__title">Overview</h2>
       </Card.Header>
       <Card.Body>
         <Row>
-          <Col>
-            <dl>
+          <Col className="card__cell">
+            <dl className="inline-dl">
               <dt>Status</dt>
-              <dd>{overview.status}</dd>
+              <dd>{renderStatus(overview.status)}</dd>
               <dt>Method</dt>
-              <dd>{overview.method}</dd>
+              <dd>{f.capitalize(overview.method)}</dd>
               <dt>Capacity</dt>
-              <dd>{overview.capacity}</dd>
+              <dd>{f.upper(overview.capacity)}</dd>
               <dt>Drayage</dt>
               <dd>{f.list(overview.drayage)}</dd>
             </dl>
           </Col>
-          <Col>
-            <dl>
+          <Col className="card__cell">
+            <dl className="inline-dl">
               <dt>Incoterms</dt>
-              <dd>{overview.incoterms}</dd>
+              <dd>{f.capitalize(overview.incoterms)}</dd>
               <dt>Service Options</dt>
               <dd>{f.list(overview.serviceOptions)}</dd>
               <dt>Hazardous or forbidden commodities</dt>
@@ -40,6 +42,19 @@ const BillingOverview = ({ overview }) => {
       </Card.Body>
     </Card>
   )
+}
+
+const renderStatus = status => {
+  switch (status) {
+    case 'active':
+      return (
+        <span className="text-success">
+          <FontAwesomeIcon icon="check" /> Active
+        </span>
+      )
+    default:
+      return f.status(status)
+  }
 }
 
 export default BillingOverview

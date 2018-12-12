@@ -14,8 +14,8 @@ const BillingInvoice = ({ invoice }) => {
         Invoice <small className="text-muted">{invoice.number}</small>
       </h2>
       <Card>
-        <Card.Header>
-          <h4 className="text-uppercase">Invoice - Revision</h4>
+        <Card.Header className="card__header">
+          <h3 className="text-uppercase card__title">Invoice - Revision</h3>
         </Card.Header>
         <Card.Body>
           <Row>
