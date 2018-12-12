@@ -4,14 +4,16 @@
   display: flex;
   justify-content: space-between;
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    width: 95%;
-    height: 1px;
-    background-color: $gray-300;
+  @include media-breakpoint-up('md') {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      width: 95%;
+      height: 1px;
+      background-color: $gray-300;
+    }
   }
 }
 

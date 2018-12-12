@@ -40,24 +40,24 @@ const UINavbar = () => {
             </Nav.Item>
           ))}
         </Nav>
-        <Nav className="align-items-center">
+        <Nav className="navbar__controls">
           <Nav.Item>
-            <Button variant="light" size="lg">
+            <Button variant="link" size="lg">
               <FontAwesomeIcon icon="search" />
             </Button>
           </Nav.Item>
           <Nav.Item>
-            <Button variant="light" size="lg">
+            <Button variant="link" size="lg">
               <FontAwesomeIcon icon="question-circle" />
             </Button>
           </Nav.Item>
           <Nav.Item>
-            <Button variant="light" size="lg">
+            <Button variant="link" size="lg">
               <FontAwesomeIcon icon="bell" />
             </Button>
           </Nav.Item>
           <Dropdown as={Nav.Item}>
-            <Dropdown.Toggle variant="light" id="user">
+            <Dropdown.Toggle variant="link" id="user">
               <div className="navbar__avatar-container">
                 <img
                   src="https://via.placeholder.com/150"
@@ -67,7 +67,7 @@ const UINavbar = () => {
               </div>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu alignRight={true}>
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>

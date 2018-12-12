@@ -1,5 +1,10 @@
 @import 'src/styles/variables';
 
+.invoice__balance-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .invoice__balance {
   color: $color-standout;
   font-size: 1.618rem;

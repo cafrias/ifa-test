@@ -19,7 +19,7 @@ const BillingInvoice = ({ invoice }) => {
         </Card.Header>
         <Card.Body>
           <Row>
-            <Col className="card__cell" xs={12} md={4}>
+            <Col className="card__cell" xs={12} md={3}>
               <dl className="inline-dl">
                 <dt>Invoice #</dt>
                 <dd>{invoice.number}</dd>
@@ -31,12 +31,14 @@ const BillingInvoice = ({ invoice }) => {
                 <dd>{invoice.terms}</dd>
               </dl>
             </Col>
-            <Col className="card__cell" xs={12} md={4}>
+            <Col className="card__cell" xs={12} md={6}>
               <h5>Bill To</h5>
             </Col>
-            <Col className="card__cell" xs={12} md={4}>
-              <h5 className="mb-4">New Balance upon Re-booking</h5>
-              <p class="invoice__balance">${f.money(invoice.balance)}</p>
+            <Col className="card__cell" xs={12} md={3}>
+              <h4 className="invoice__balance-title">
+                New Balance upon Re-booking
+              </h4>
+              <p className="invoice__balance">${f.money(invoice.balance)}</p>
             </Col>
           </Row>
         </Card.Body>

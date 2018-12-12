@@ -1,3 +1,5 @@
+@import 'src/styles/variables';
+
 .navbar__avatar-container {
   width: 45px;
   height: 45px;
@@ -8,4 +10,19 @@
 
 .navbar__avatar {
   border-radius: 50%;
+}
+
+.navbar__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  & .btn-link {
+    color: $gray-600;
+
+    &:hover {
+      color: $gray-900;
+    }
+  }
 }
