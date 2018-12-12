@@ -1,6 +1,6 @@
 # IFA
 
-> Test Poject
+> Test Project
 
 This is a code test project. The whole project is written in React, using Boostrap via `react-bootstrap` library.
 
